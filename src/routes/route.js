@@ -2,6 +2,6 @@ import todoRouter from './todo.routes.js'
 
 
 const routes = (app) => {
-    app.use('/todo', todoRouter)
+    app.use('/api/todo', todoRouter)
 }
 export default routes

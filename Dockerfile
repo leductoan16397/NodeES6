@@ -1,15 +1,11 @@
-FROM node:12
+FROM node:14 as debug
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/NodeES6
 
-ADD . /usr/src/app
-
+ADD . /usr/src/NodeES6
 
 RUN npm i
 
+EXPOSE 5000
 
-
-EXPOSE 3000
-
-
-CMD [ "node","index.js" ]
+CMD npm run dev
