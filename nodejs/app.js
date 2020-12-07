@@ -9,7 +9,7 @@ import connectDatabase from './configs/db.config.js'
 import routes from './src/routes/route.js';
 dotenv.config()
 
-// connectDatabase()
+connectDatabase()
 
 const PORT = process.env.PORT || 5000;
 const isProd = process.env.NODE_ENV === "production"
@@ -28,8 +28,8 @@ app.use(express.json())
 routes(app)
 
 app.get('/', async (req, res) => {
-    console.log('asdccc zxs');
-    res.json({ message: "hello Toan" });
+    console.log(' acac zxs');
+    res.json({ message: "hello asdd  Toan" });
 
 })
 
@@ -40,4 +40,4 @@ app.get('/', async (req, res) => {
 
 
 app.listen(PORT)
-console.log(`listen on port :${PORT}`);
+console.log(`listen on  port :${PORT}`);

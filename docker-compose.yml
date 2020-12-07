@@ -4,6 +4,10 @@ services:
   nodejs-server:
     container_name: nodejs-server
     image: node-es6:latest
+    depends_on:
+      - mongo
+    networks:
+      - app-network
     build:
       context: ./nodejs
       target: debug
@@ -16,6 +20,9 @@ services:
 
   mongo:
     container_name: mongoDB
+    hostname: mongoDB
+    networks:
+      - app-network
     image: mongo:4
     restart: always
     ports:
@@ -26,3 +33,7 @@ services:
     #   - MONGO_INITDB_ROOT_PASSWORD=root_password
     volumes:
       - ../mongodata:/data/db
+
+networks:
+  app-network:
+    driver: bridge

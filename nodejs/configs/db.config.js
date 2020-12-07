@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 
 const connectDatabase = () => {
     const mongoDbUrl = `mongodb://${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DB_NAME}`
+    // const mongoDbUrl = `mongodb://mongoDB:27017/dockerLearn`
     console.log(`connecting to ${mongoDbUrl}`);
     mongoose.Promise = global.Promise
     mongoose.connect(mongoDbUrl, {
