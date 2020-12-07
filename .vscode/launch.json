@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Attach",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node",
+            "restart": true,
+        },
+        {
             "name": "Launch via NPM",
             "request": "launch",
             "runtimeArgs": [
@@ -16,6 +26,17 @@
                 "<node_internals>/**"
             ],
             "type": "pwa-node"
+        },
+        {
+            "name": "Docker: attach to NodeJS on Docker",
+            "type": "node",
+            "request": "attach",
+            "remoteRoot": "/work/",
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}/nodejs",
+            "protocol": "inspector",
+            "restart": true
         }
     ]
 }

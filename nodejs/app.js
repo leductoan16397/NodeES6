@@ -28,7 +28,8 @@ app.use(express.json())
 routes(app)
 
 app.get('/', async (req, res) => {
-    res.json({ message: "hello  suma cnabsndb abcd" });
+    console.log('asdccc zxs');
+    res.json({ message: "hello Toan" });
 
 })
 
@@ -39,4 +40,4 @@ app.get('/', async (req, res) => {
 
 
 app.listen(PORT)
-console.log(`listen on port :${PORT}`);
+console.log(`listen on sdsport :${PORT}`);
