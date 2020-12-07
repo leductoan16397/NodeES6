@@ -14,15 +14,15 @@ services:
       - 5000:5000
       - 9229:9229
 
-  # mongo:
-  #   container_name: mongoDB
-  #   image: mongo:4
-  #   restart: always
-  #   ports:
-  #     - "27017:27017"
-  #   # environment:
-  #   #   - MONGO_INITDB_DATABASE=pastime
-  #   #   - MONGO_INITDB_ROOT_USERNAME=root
-  #   #   - MONGO_INITDB_ROOT_PASSWORD=root_password
-  #   volumes:
-  #     - ../mongodata:/data/db
+  mongo:
+    container_name: mongoDB
+    image: mongo:4
+    restart: always
+    ports:
+      - "27017:27017"
+    # environment:
+    #   - MONGO_INITDB_DATABASE=pastime
+    #   - MONGO_INITDB_ROOT_USERNAME=root
+    #   - MONGO_INITDB_ROOT_PASSWORD=root_password
+    volumes:
+      - ../mongodata:/data/db

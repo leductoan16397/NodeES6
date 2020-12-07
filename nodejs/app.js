@@ -40,4 +40,4 @@ app.get('/', async (req, res) => {
 
 
 app.listen(PORT)
-console.log(`listen on sdsport :${PORT}`);
+console.log(`listen on port :${PORT}`);
